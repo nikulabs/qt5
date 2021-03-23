@@ -648,6 +648,7 @@ sub run
     $url =~ s/((?:tqtc-)?qt5)$//;
     my $qtrepo = $1 || 'qt5';
     $self->{'base-url'} = $url;
+    print "Url is $url, qtrepo is $qtrepo";
 
     $self->git_clone_all_submodules($qtrepo, $self->{branch}, $self->{alternates}, @{$self->{'module-subset'}});
 
